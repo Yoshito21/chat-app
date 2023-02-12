@@ -1,7 +1,7 @@
 <div class="chat_head">
   <div class="left_header">
     <div class="header_title">
-      hogefuga
+    <%= @room.name %>
     </div>
   </div>
   <div class="right_header">
@@ -12,29 +12,7 @@
 </div>
 
 <div class="chat_body">
-  <div class="chat_upper">
-    <div class="chat_who">
-      名前1
-    </div>
-    <div class="chat_when">
-      2023/2/10
-    </div>
-  </div>
-  <div class="chat_what">
-    内容1
-  </div>
-
-  <div class="chat_upper">
-    <div class="chat_who">
-      名前2
-    </div>
-    <div class="chat_when">
-      2023/2/10
-    </div>
-  </div>
-  <div class="chat_what">
-    内容2
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
