@@ -38,11 +38,11 @@
   overflow-y: scroll;
 }
 
-.chat_room{
+.room{
   margin: 20px 20px 40px 0;
 }
 
-.chat_room a{
+.room a{
   color: white;
   text-decoration: none;
 }
